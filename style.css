@@ -1,0 +1,42 @@
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.topnav {
+    overflow: hidden;
+    font-family: 'Poppins';
+    font-weight: bold;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.3vw;
+    border-radius: 5vw;
+    margin: 1vw;
+    box-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
+}
+
+.home {
+    font-size: large;
+    float: left;
+    text-align: center;
+    padding: 1vw;
+    text-decoration: none;
+    background-image: linear-gradient(45deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 5s ease infinite;
+    text-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
+}
+
+.works, .about {
+    font-size: large;
+    float: right;
+    text-align: center;
+    color: white;
+    padding: 1vw;
+    text-decoration: none;
+}
