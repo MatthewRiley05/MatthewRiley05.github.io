@@ -1,42 +1,105 @@
 @keyframes gradient {
     0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+    100% {background-position: 200% 50%;}
 }
 
-.topnav {
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 97%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
     overflow: hidden;
     font-family: 'Poppins';
     font-weight: bold;
     border-style: solid;
     border-color: white;
-    border-width: 0.3vw;
-    border-radius: 5vw;
-    margin: 1vw;
-    box-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
+    border-width: 0.5vh;
+    border-radius: 5vh;
+    padding-inline: 1vw;
+    margin: 2vh;
+    box-shadow: 0 0 1vw rgba(255, 255, 255, 0.3);
+}
+
+.home, .works, .about {
+    text-decoration: none;
 }
 
 .home {
-    font-size: large;
-    float: left;
-    text-align: center;
-    padding: 1vw;
-    text-decoration: none;
-    background-image: linear-gradient(45deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    font-size: 3vh;
+    align-items: left;
+    background-image: repeating-linear-gradient(90deg, #4158D0, #C850C0, #FFCC70, #C850C0, #4158D0);
     background-size: 200% 200%;
     color: transparent;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient 5s ease infinite;
-    text-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
+    -moz-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    animation: gradient 5s linear infinite;
+    transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.right {
+    display: flex;
+    font-size: 2vh;
+    color: white;
 }
 
 .works, .about {
-    font-size: large;
-    float: right;
-    text-align: center;
     color: white;
-    padding: 1vw;
-    text-decoration: none;
+    margin-inline: 1vw;
+    font-size: 2vh;
+    align-items: right;
+    transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.home:hover{
+    cursor: pointer;
+    transform: scale(1.005);
+    text-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
+}
+
+.works:hover, .about:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    text-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
+    background-image: repeating-linear-gradient(90deg, #4158D0, #C850C0, #FFCC70, #C850C0, #4158D0);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    animation: gradient 5s linear infinite;
+}
+
+.slides{
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.titlePage, .worksPage, .aboutPage{
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.worksPage{
+    width: 100%;
+    height: 100vh;
+    background-color: #010617;
 }
