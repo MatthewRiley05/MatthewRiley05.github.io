@@ -8,19 +8,28 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     </head>
     <body style="background-color: black;">
+        <div class="navbar">
+            <ul class="iconList">
+                <li><a href="https://www.facebook.com/matthewriley.raymundo/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/matthewriley05/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/matthewriley05/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/MatthewRiley05" target="_blank"><i class="fab fa-github"></i></a></li>
+            </ul>
+            <a class="home" href="#titlePage">
+                Matthew <span class="mobile-hide">Raymundo</span>
+            </a>
+
+            <div class="right">
+                <a class="works" href="#worksPageTitle">WORKS</a>
+                <a class="about" href="#aboutPage">ABOUT</a>
+            </div>
+        </div>
         <div class="slides">
             <div class="titlePage", id="titlePage">
-                <div class="navbar">
-                    <a class="home" href="#titlePage">
-                        Matthew <span class="mobile-hide">Raymundo</span>
-                    </a>
-                    <div class="right">
-                        <a class="works" href="#worksPage">WORKS</a>
-                        <a class="about" href="#aboutPage">ABOUT</a>
-                    </div>
-                </div>
                 <div class="parallaxContainer">
                     <div class="parallax">
                         <img src="assets/Logo.png">
@@ -28,11 +37,61 @@
                             Matthew Raymundo
                         </div>
                     </div>
+                    <div class="downArrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
             </div>
-            <div class="worksPage", id="worksPage">
+            <div class="worksPageTitle", id="worksPageTitle">
+                <div class="worksTitle">
+                    <h1>Works</h1>
+                </div>
+                <div class="downArrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="worksPage1", id="worksPage1">
+                <hr class = "line">
+                <div class="works1">
+                    <h2>YouTube Downloader</h2>
+                    <p>
+                        A YouTube downloader that allows you to download videos and audio from YouTube. 
+                        It also allows you to customize the download properties, such as the quality of the video or audio.
+                    </p>
+                </div>
+                <div class="downArrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="worksPage2", id="worksPage2">
+                <hr class = "line">
+                <div class="works2">
+                    <h2>Text-Based Story Game</h2>
+                    <p>
+                        A text-based story game that allows you to make choices that affect the outcome of the story. 
+                        It is a work in progress, and I am currently working on adding more stories and choices.
+                    </p>
+                </div>
+                <div class="downArrow">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
             </div>
             <div class="aboutPage", id="aboutPage">
+                <div class="aboutText">
+                    <h1>About Me</h1>
+                    <hr class = "line">
+                    <p>
+                        I am a first year student at the Hong Kong Polytechnic University, 
+                        studying Computing and Artificial Intelligence. 
+                        I am passionate about the development of technology, and I am always 
+                        looking for ways to use my skills to make a positive impact on the world. 
+                        I am currently working on a variety of projects, including a YouTube downloader 
+                        with customizable download properties, and a text-based story game. 
+                        I am also a member of the Google Developer Student Club where I learn
+                        a lot about developing my skills. My hobbies include developing apps,
+                        taking and editing photos, and playing video games.
+                    </p>
+                </div>
             </div>
         </div>
     </body>
