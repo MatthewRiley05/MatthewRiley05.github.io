@@ -39,7 +39,7 @@ html, body{
     border-radius: 5vh;
     padding-inline: 1vmax;
     margin-top: 3vh;
-    box-shadow: 0 0 1vw rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
 }
 
 .home, .works, .about {
@@ -65,7 +65,7 @@ html, body{
 .iconList a:hover{
     font-size: 3.05vh;
     cursor: pointer;
-    text-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
     background-image: repeating-linear-gradient(90deg, #4158D0, #C850C0, #FFCC70, #C850C0, #4158D0);
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -98,6 +98,11 @@ html, body{
     transition: text-shadow 0.3s ease-in-out;
 }
 
+.home:hover{
+    cursor: pointer;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
 .right {
     display: flex;
     font-size: 2vh;
@@ -112,15 +117,10 @@ html, body{
     transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.home:hover{
-    cursor: pointer;
-    text-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
-}
-
 .works:hover, .about:hover {
     cursor: pointer;
     transform: scale(1.05);
-    text-shadow: 0 0 1vw rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
     background-image: repeating-linear-gradient(90deg, #4158D0, #C850C0, #FFCC70, #C850C0, #4158D0);
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -141,7 +141,7 @@ html, body{
     scroll-behavior: smooth;
 }
 
-.downArrow{
+.downArrow a{
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -149,6 +149,13 @@ html, body{
     color: white;
     bottom: 0;
     margin-bottom: 1vh;
+    text-decoration: none;
+    transition: font-size 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.downArrow a:hover{
+    font-size: 3.05vh;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .titlePage, .worksPageTitle, .worksPage1, .worksPage2, .aboutPage{
@@ -228,10 +235,18 @@ html, body{
     -moz-text-fill-color: transparent;
     -o-text-fill-color: transparent;
     animation: gradient 5s linear infinite;
-    text-shadow: 0 -10px 50px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
-.works1 h2, .works2 h2{
+.worksPage1{
+    background-image: url("assets/YouTubeDownloaderPicture.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-attachment: fixed;
+
+}
+.works1 h2{
     position: absolute;
     font-family: 'Poppins';
     font-weight: bold;
@@ -248,10 +263,19 @@ html, body{
     -moz-text-fill-color: transparent;
     -o-text-fill-color: transparent;
     animation: gradient 5s linear infinite;
-    text-shadow: 0 -10px 50px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
-.works1 p, .works2 p{
+.line1{
+    position: absolute;
+    width: 23%;
+    height: 0.5vh;
+    background-color: white;
+    margin-top: 35.5vh;
+    margin-left: 3vw;
+}
+
+.works1 p{
     width: 50vw;
     position: absolute;
     font-family: 'Poppins';
@@ -260,7 +284,58 @@ html, body{
     margin-top: 40vh;
     margin-inline: 3vw;
     color: white;
-    text-shadow: 0 0 1vw rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.worksPage2{
+    background-image: url("assets/TextGamePicture.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    background-attachment: fixed;
+}
+
+.works2 h2{
+    position: absolute;
+    line-height: 1;
+    max-width: 50vw;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 10vmin;
+    margin-top: 20vh;
+    margin-inline: 3vw;
+    background-image: repeating-linear-gradient(90deg, #4158D0, #C850C0, #FFCC70, #C850C0, #4158D0);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    animation: gradient 5s linear infinite;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.line2{
+    position: absolute;
+    width: 23%;
+    height: 0.5vh;
+    background-color: white;
+    margin-top: 44.5vh;
+    margin-left: 3vw;
+}
+
+.works2 p{
+    width: 50vw;
+    position: absolute;
+    font-family: 'Poppins';
+    font-size: 3vmin;
+    text-align: justify;
+    margin-top: 50vh;
+    margin-inline: 3vw;
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .aboutPage{
@@ -288,17 +363,16 @@ html, body{
     -moz-text-fill-color: transparent;
     -o-text-fill-color: transparent;
     animation: gradient 5s linear infinite;
-    text-shadow: 0 -10px 50px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
-.line{
+.lineAbout{
     position: absolute;
     width: 23%;
     height: 0.5vh;
     background-color: white;
     margin-top: 35.5vh;
     margin-left: 3vw;
-
 }
 
 .aboutText p{
@@ -310,5 +384,5 @@ html, body{
     margin-top: 40vh;
     margin-inline: 3vw;
     color: white;
-    text-shadow: 0 0 1vw rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
