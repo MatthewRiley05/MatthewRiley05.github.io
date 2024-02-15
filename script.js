@@ -8,6 +8,7 @@ const applyTheme = (theme) => {
     document.documentElement.style.setProperty('--text-color', theme === 'dark' ? 'white' : 'black');
     document.documentElement.style.setProperty('--border-color', theme === 'dark' ? 'white' : 'black');
     document.documentElement.style.setProperty('--icon-color', theme === 'dark' ? 'white' : 'black');
+    document.documentElement.style.setProperty('--shadow-color', theme === 'dark' ? 'rgba(255, 255, 255, 0.3)' : 'rgba(0, 0, 0, 0)');
 }
 
 applyTheme(currentTheme); // Apply initial theme

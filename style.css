@@ -14,16 +14,17 @@
 }
 
 :root {
-    --background-color: white;
-    --text-color: black;
-    --border-color: black;
-    --icon-color: black;
+    --background-color: black;
+    --text-color: white;
+    --border-color: white;
+    --icon-color: white;
+    --shadow-color: rgba(255, 255, 255, 0.3);
 }
 
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-    transition: background-color 0.3s ease-in-out, text-color 0.3s ease-in-out, border-color 0.3s ease-in-out, icon-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, text-color 0.3s ease-in-out, border-color 0.3s ease-in-out, icon-color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .theme-toggle {
@@ -59,7 +60,7 @@ html, body{
     border-radius: 5vh;
     padding-inline: 1vmax;
     margin-top: 3vh;
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 50px var(--shadow-color);
 }
 
 .home, .works, .about {
@@ -72,7 +73,6 @@ html, body{
     list-style: none;
     padding: 0;
     margin: 0;
-
 }
 
 .iconList a{
@@ -85,7 +85,7 @@ html, body{
 .iconList a:hover{
     font-size: 3.05vh;
     cursor: pointer;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    text-shadow:  0 0 20px var(--shadow-color);
     background-image: repeating-linear-gradient(90deg, #4158D0, #C850C0, #FFCC70, #C850C0, #4158D0);
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -120,7 +120,7 @@ html, body{
 
 .home:hover{
     cursor: pointer;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 30px var(--shadow-color);
 }
 
 .right {
@@ -140,7 +140,7 @@ html, body{
 .works:hover, .about:hover, .theme-toggle:hover {
     cursor: pointer;
     transform: scale(1.05);
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 30px var(--shadow-color);
     background-image: repeating-linear-gradient(90deg, #4158D0, #C850C0, #FFCC70, #C850C0, #4158D0);
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -151,6 +151,7 @@ html, body{
     -moz-text-fill-color: transparent;
     -o-text-fill-color: transparent;
     animation: gradient 5s linear infinite;
+
 }
 
 .slides{
@@ -175,7 +176,7 @@ html, body{
 
 .downArrow a:hover{
     font-size: 3.05vh;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 20px var(--shadow-color);
 }
 
 .titlePage, .worksPageTitle, .worksPage1, .worksPage2, .aboutPage{
@@ -222,7 +223,7 @@ html, body{
     -moz-text-fill-color: transparent;
     -o-text-fill-color: transparent;
     animation: gradient 5s linear infinite;
-    text-shadow: 0 -10px 50px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 -10px 50px var(--shadow-color);
 }
 
 .parallax:hover{
@@ -238,6 +239,7 @@ html, body{
 }
 
 .worksTitle{
+    cursor: default;
     font-family: 'Poppins';
     font-weight: bold;
     font-size: 10vmin;
@@ -251,7 +253,7 @@ html, body{
     -moz-text-fill-color: transparent;
     -o-text-fill-color: transparent;
     animation: gradient 5s linear infinite;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 30px var(--shadow-color);
 }
 
 .worksPage1{
@@ -260,47 +262,6 @@ html, body{
     background-repeat: no-repeat;
     background-position: 95% 50%;
     background-attachment: fixed;
-
-}
-.works1 h2{
-    position: absolute;
-    font-family: 'Poppins';
-    font-weight: bold;
-    font-size: 10vmin;
-    margin-top: 20vh;
-    margin-inline: 3vw;
-    background-image: repeating-linear-gradient(90deg, #4158D0, #C850C0, #FFCC70, #C850C0, #4158D0);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -o-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    -o-text-fill-color: transparent;
-    animation: gradient 5s linear infinite;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-}
-
-.line1{
-    position: absolute;
-    width: 23%;
-    height: 0.5vh;
-    background-color: var(--text-color);
-    margin-top: 35.5vh;
-    margin-left: 3vw;
-}
-
-.works1 p{
-    width: 50vw;
-    position: absolute;
-    font-family: 'Poppins';
-    font-size: 3vmin;
-    text-align: justify;
-    margin-top: 40vh;
-    margin-inline: 3vw;
-    color: var(--text-color);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .worksPage2{
@@ -311,64 +272,32 @@ html, body{
     background-attachment: fixed;
 }
 
-.works2 h2{
-    position: absolute;
-    line-height: 1;
-    max-width: 50vw;
-    font-family: 'Poppins';
-    font-weight: bold;
-    font-size: 10vmin;
-    margin-top: 20vh;
-    margin-inline: 3vw;
-    background-image: repeating-linear-gradient(90deg, #4158D0, #C850C0, #FFCC70, #C850C0, #4158D0);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -o-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    -o-text-fill-color: transparent;
-    animation: gradient 5s linear infinite;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-}
-
-.line2{
-    position: absolute;
-    width: 23%;
-    height: 0.5vh;
-    background-color: var(--text-color);
-    margin-top: 44.5vh;
-    margin-left: 3vw;
-}
-
-.works2 p{
-    width: 50vw;
-    position: absolute;
-    font-family: 'Poppins';
-    font-size: 3vmin;
-    text-align: justify;
-    margin-top: 50vh;
-    margin-inline: 3vw;
-    color: var(--text-color);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-}
-
 .aboutPage{
     background-image: url("assets/CasualPicture.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: 90% 50%;
     background-attachment: fixed;
 }
 
-.aboutText h1{
-    position: absolute;
+.works1, .works2, .aboutText{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    width: 50vw;
+    padding-inline: 3vw;
+    gap: 3vh;
+}
+
+.aboutPage h1, .works1 h2, .works2 h2{
+    cursor: default;
     font-family: 'Poppins';
     font-weight: bold;
     font-size: 10vmin;
-    margin-top: 20vh;
-    margin-inline: 3vw;
+    width: 50vw;
+    line-height: 1;
     background-image: repeating-linear-gradient(90deg, #4158D0, #C850C0, #FFCC70, #C850C0, #4158D0);
     background-size: 200% 200%;
     -webkit-background-clip: text;
@@ -379,26 +308,28 @@ html, body{
     -moz-text-fill-color: transparent;
     -o-text-fill-color: transparent;
     animation: gradient 5s linear infinite;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 20px var(--shadow-color);
+    margin: 0;
+    padding: 0;
 }
 
-.lineAbout{
-    position: absolute;
-    width: 23%;
+.line1, .line2, .lineAbout{
+    width: 25vw;
     height: 0.5vh;
+    margin-right: 100vw;
     background-color: var(--text-color);
-    margin-top: 35.5vh;
-    margin-left: 3vw;
+    margin: 0;
+    padding: 0;
 }
 
-.aboutText p{
-    width: 65vw;
-    position: absolute;
+.aboutText p, .works1 p, .works2 p{
+    cursor: default;
+    width: 50vw;
     font-family: 'Poppins';
     font-size: 3vmin;
     text-align: justify;
-    margin-top: 40vh;
-    margin-inline: 3vw;
     color: var(--text-color);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 20px var(--shadow-color);
+    margin: 0;
+    padding: 0;
 }
