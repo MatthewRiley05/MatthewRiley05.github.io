@@ -28,6 +28,13 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
     applyTheme(currentTheme);
 });
 
+var font = new FontFaceObserver('Poppins');
+
+font.load().then(function () {
+  document.body.style.opacity = '1';
+  document.getElementById('loading-animation').style.display = 'none';
+});
+
 window.addEventListener('DOMContentLoaded', (event) => {
     let parallaxText = document.getElementById("text");
     let scrollContainer = document.querySelector(".slides");
