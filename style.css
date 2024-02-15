@@ -72,7 +72,7 @@ html, body{
     gap: 1vw;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 1vw;
 }
 
 .iconList a{
