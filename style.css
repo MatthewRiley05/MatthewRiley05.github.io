@@ -25,7 +25,7 @@ body {
     opacity: 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    transition: background-color 0.3s ease-in-out, text-color 0.3s ease-in-out, border-color 0.3s ease-in-out, icon-color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, text-color 0.3s ease-in-out, border-color 0.3s ease-in-out, icon-color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 1s ease-in-out;
 }
 
 #loading-animation {
