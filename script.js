@@ -32,17 +32,16 @@ var font = new FontFaceObserver('Poppins');
 
 font.load().then(function () {
   document.body.style.opacity = '1';
-  document.getElementById('loading-animation').style.display = 'none';
 });
 
 window.addEventListener('DOMContentLoaded', (event) => {
-    let parallaxText = document.getElementById("text");
-    let scrollContainer = document.querySelector(".slides");
-  
+  let parallaxText = document.getElementById("text");
+  let scrollContainer = document.querySelector(".slides");
+
     scrollContainer.addEventListener("scroll", () => {
       let value = scrollContainer.scrollTop;
       parallaxText.style.marginTop = value * 0.3 + "px";
-  
+
       // Adjust the value 100 to the point where you want the text to disappear
       if (value > 900) {
         parallaxText.style.opacity = "0";
