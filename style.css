@@ -393,7 +393,7 @@ html, body{
     .downArrow a{
         bottom: 10vh;
     }
-    .worksPage1, .worksPage2{
+    .worksPage1, .worksPage2, .worksPage3{
         background-position: 50% 30%;
         background-size: 90vw;
     }
@@ -401,7 +401,7 @@ html, body{
         background-position: 50% 5%;
         background-size: 80vw;
     }
-    .works1, .works2, .aboutText{
+    .works1, .works2, .works3, .aboutText{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -410,17 +410,17 @@ html, body{
         padding-top: 20vh;
         gap: 1vh;
     }
-    .aboutPage h1, .works1 h2, .works2 h2{
+    .works1 h2, .works2 a, .works3 h2, .aboutPage h1{
         width: 90vw;
     }
-    .line1, .line2, .lineAbout{
+    .line1, .line2, .line3, .lineAbout{
         width: 70vw;
         height: 0.5vh;
         margin-right: 24.5vw;
         background-color: var(--text-color);
         padding: 0;
     }
-    .aboutText p, .works1 p, .works2 p{
+    .works1 p, .works2 p, .works3 p, .aboutText p{
         width: 90vw;
         padding: 0;
     }
